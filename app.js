@@ -1,27 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser')
 
-const app = express();
+const adminRoutes = require('./routes/admin')
+const tiendaRoutes = require('./routes/tienda')
 
+const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use(adminRoutes);
+app.use(tiendaRoutes);
 
-app.use('/crear-producto', (req, res, next) => {
-    console.log('Estamos en el MiddleWare');
-    res.send('<form action="/productos" method="POST"><input type="text" name="nombreproducto"><button type="submit">Crear</button></form>');
-});
 
-app.post('/productos', (req, res, next) => {
-    console.log(req.body);
-    res.redirect('/')
-});
-
-app.use('/', (req, res, next) => {
-    console.log('Estamos en el segundo MiddleWare');
-    res.send('<h1>Hola desde Express</h1>');
-});
-
-app.listen(3000, () => {
-    console.log("Se ha iniciado el servidor express.js")
-});
+app.listen(3000);
