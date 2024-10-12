@@ -10,18 +10,21 @@
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">Tienda</a></li>
-                <li><a href="/admin/crear-producto">Crear Producto</a></li>
+    <header class="main-header">
+        <nav class="main-header__nav">
+            <ul class="main-header__item-list">
+                <li class="main-header__item"><a href="/">Tienda</a></li>
+                <li class="main-header__item"><a class="active" href="/admin/crear-producto">Crear Producto</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
-        <form action="/admin/crear-producto" method="POST">
-            <input type="text" name="nombreproducto">
+        <form class="product-form"  action="/admin/crear-producto" method="POST">
+            <div class="form-control">
+                <label for="nombreproducto"></label>
+                <input type="text" name="nombreproducto" id="nombreproducto">
+            </div>
             <button type="submit">Crear Producto</button>
         </form>
     </main>
