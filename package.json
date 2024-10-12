@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jcabelloc/back-end-sesion3/issues"
   },
-  "homepage": "https://github.com/jcabelloc/back-end-sesion3#readme"
+  "homepage": "https://github.com/jcabelloc/back-end-sesion3#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
 }
