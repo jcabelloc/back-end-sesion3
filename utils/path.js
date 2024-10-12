@@ -1,3 +1,6 @@
 const path = require('path');
 
-module.exports = path.dirname(require.main.filename);
+const appDir = path.dirname(require.main.filename);
+
+
+module.exports = appDir;
