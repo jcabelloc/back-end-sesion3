@@ -2,12 +2,12 @@ const express = require("express");
 
 const app = express();
 
-app.use((req, res, next) => {
+app.use('/crear-producto', (req, res, next) => {
     console.log('Estamos en el MiddleWare');
-    next();
+    res.send('<h1>Vamos a crear un producto</h1>');
 });
 
-app.use((req, res, next) => {
+app.use('/', (req, res, next) => {
     console.log('Estamos en el segundo MiddleWare');
     res.send('<h1>Hola desde Express</h1>');
 });
