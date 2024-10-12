@@ -12,7 +12,7 @@ app.use('/crear-producto', (req, res, next) => {
     res.send('<form action="/productos" method="POST"><input type="text" name="nombreproducto"><button type="submit">Crear</button></form>');
 });
 
-app.use('/productos', (req, res, next) => {
+app.post('/productos', (req, res, next) => {
     console.log(req.body);
     res.redirect('/')
 });
