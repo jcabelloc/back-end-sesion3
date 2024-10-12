@@ -7,7 +7,7 @@ npm init
 
 ## Instalacion de nodemon
 ```
-npm install nodemon --savedev
+npm install nodemon --save-dev
 ```
 
 ## Agregar al package.json
